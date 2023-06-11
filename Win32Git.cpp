@@ -42,6 +42,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 	HDC hdc;
 	PAINTSTRUCT ps;
 	static LPCTSTR m1 = TEXT("깃 실습용 프로젝트");
+	static LPCTSTR m2 = TEXT("두번째 문자열");
 
 	switch (iMessage) {
 	case WM_CREATE:
@@ -50,6 +51,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 	case WM_PAINT:
 		hdc = BeginPaint(hWnd, &ps);
 		TextOut(hdc, 10, 10, m1, lstrlen(m1));
+		TextOut(hdc, 10, 30, m2, lstrlen(m2));
 		EndPaint(hWnd, &ps);
 		return 0;
 	case WM_DESTROY:
