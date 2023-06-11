@@ -54,6 +54,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 		TextOut(hdc, 10, 30, m2, lstrlen(m2));
 		EndPaint(hWnd, &ps);
 		return 0;
+	case WM_LBUTTONDOWN:
+		MessageBeep(0);
+		return 0;
 	case WM_DESTROY:
 		PostQuitMessage(0);
 		return 0;
